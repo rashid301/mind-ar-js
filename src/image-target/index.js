@@ -10,12 +10,11 @@ export {
   OfflineCompiler
 }
 
-if (!window.MINDAR) {
-  window.MINDAR = {};
-}
+// if (typeof window  !== 'undefined' && !window.MINDAR) {
+//   window.MINDAR.IMAGE = {
+//     Controller, 
+//     Compiler,
+//     UI
+//   };
+// }
 
-window.MINDAR.IMAGE = {
-  Controller, 
-  Compiler,
-  UI
-};

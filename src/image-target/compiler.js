@@ -3,6 +3,7 @@ import CompilerWorker  from "./compiler.worker.js?worker&inline";
 
 export class Compiler extends CompilerBase {
   createProcessCanvas(img) {
+    console.log('wrong location');
     const processCanvas = document.createElement('canvas');
     processCanvas.width = img.width;
     processCanvas.height = img.height;

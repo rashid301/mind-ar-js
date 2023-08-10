@@ -13,13 +13,14 @@ const moduleConfig= defineConfig({
         outDir:outDir,
         emptyOutDir:false,
         copyPublicDir:false,
+        sourcemap: true,
         lib: {
             fileName:"[name].prod",
             entry:'index.js',
-            formats:["es"],
+            formats:["cjs"],
         },
         rollupOptions:{
-            external:(id)=>(id==='three'||id.includes('three/examples/jsm/')||id.includes('three/addons/')),
+            external:(id)=>(id==='three'||id.includes('three/examples/jsm/')||id.includes('three/addons/') || id === 'canvas'),
             input:{
                 'mindar-image': './src/image-target/index.js',
                 'mindar-image-three': './src/image-target/three.js',

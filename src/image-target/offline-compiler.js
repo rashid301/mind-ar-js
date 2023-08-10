@@ -6,6 +6,7 @@ import './detector/kernels/cpu/index.js'
 
 export class OfflineCompiler extends CompilerBase {
   createProcessCanvas(img) {
+    console.log('offline compiler canvas');
     const processCanvas = createCanvas(img.width, img.height);
     return processCanvas;
   }
